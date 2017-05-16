@@ -74,4 +74,10 @@ OK
 
 This will output your code coverage report, which you can view by opening `/web/cover/index.html`
 
+To Do
+=====
+
+1. Sort the failing unit test (set SERVER_NAME?)
+1. Put the task data in a database (MongoDB?)
+
 
