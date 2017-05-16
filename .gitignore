@@ -1,5 +1,6 @@
 *.pyc
-cover/
+web/cover/
+web/flask/
 venv/
 
 .coverage
