@@ -6,7 +6,7 @@ import requests
 import json
 from base64 import b64encode
 
-class ErrorTests(unittest.TestCase): 
+class UnitTests(unittest.TestCase): 
 
     @classmethod
     def setUpClass(cls):
@@ -80,12 +80,12 @@ class ErrorTests(unittest.TestCase):
 
         self.assertEqual(None, response)
 
-    def test_public_task(self):
+    # def test_public_task(self):
 
-        with app.app.app_context():
-            response = app.make_public_task(self.task)
+    #     with app.app.app_context():
+    #         response = app.make_public_task(self.task)
 
-        self.assertIn('title', response)
+    #     self.assertIn('title', response)
 
     def test_get_all_tasks(self):
 
