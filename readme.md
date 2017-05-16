@@ -8,11 +8,11 @@ I have added full unit tests, some integration tests, and I have used Docker-Com
 Setup Option 1: virtualenv
 ==========================
 
-Requirements:
+**Requirements:**
 
 -  virtualenv
 
-Setup:
+**Setup:**
 
 -  clone this repo
 -  make a virtualenv inside it e.g. `virtualenv venv`
@@ -24,11 +24,11 @@ Setup:
 Setup Option 2: Docker
 ======================
 
-Requirements:
+**Requirements:**
 
 -  Docker
 
-Setup:
+**Setup:**
 
 -  clone this repo
 -  from within the repo, run `docker-compose build`
@@ -49,3 +49,27 @@ curl -u miguel:python -i http://localhost:5000/todo/api/v1.0/tasks #returns all 
 curl -u miguel:python -i http://localhost:5000/todo/api/v1.0/tasks/1 #returns first task
 curl -u miguel:python -i -H "Content-Type: application/json" -X POST -d '{"title":"Read a book"}' http://localhost:5000/todo/api/v1.0/tasks #posts a new task
 ```
+
+Running the tests
+=================
+
+*If you used Docker, the unit tests should have run automatically during the build. You can still run them manually, following the instructions below.*
+
+From the webroot, with the venv activated, run:
+
+`nosetests --with-coverage --cover-html --cover-erase --cover-package=app`
+
+to get:
+```
+......................
+Name     Stmts   Miss  Cover
+----------------------------
+app.py      66      1    98%
+----------------------------------------------------------------------
+Ran 22 tests in 0.502s
+
+OK
+
+```
+
+
