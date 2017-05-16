@@ -72,4 +72,6 @@ OK
 
 ```
 
+This will output your code coverage report, which you can view by opening `/web/cover/index.html`
+
 
